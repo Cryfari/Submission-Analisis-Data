@@ -14,22 +14,17 @@ min_date = day_df["dteday"].min()
 max_date = day_df["dteday"].max()
  
 with st.sidebar:
-    # Menambahkan logo perusahaan
-    st.image("https://github.com/dicodingacademy/assets/raw/main/logo.png")
-    
-    # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
         label='Rentang Waktu',min_value=min_date,
         max_value=max_date,
         value=[min_date, max_date]
     )
 
-st.header('Dicoding Collection Dashboard :sparkles:')
+st.header('Dashboard')
 
 col1, col2 = st.columns(2)
 
 with col1:
-    # [index_start_date:index_end_date]
     total_orders = day_df.cnt.sum()
     st.metric("Total rental", value=total_orders)
 with col2:
