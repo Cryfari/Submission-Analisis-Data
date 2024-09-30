@@ -5,8 +5,8 @@ import streamlit as st
 from babel.numbers import format_currency
 sns.set(style='dark')
 
-day_df = pd.read_csv("./day_data.csv")
-hour_df = pd.read_csv("./hour_data.csv")
+day_df = pd.read_csv("day_data.csv")
+hour_df = pd.read_csv("hour_data.csv")
 
 day_df['dteday'] = pd.to_datetime(day_df['dteday'])
 
